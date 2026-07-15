@@ -3554,13 +3554,14 @@ export function IndexContent({ onProjectClick }: { onProjectClick?: (sectionId: 
                       display: 'flex',
                       gap: '6px',
                       overflowX: 'auto',
-                      paddingBottom: '4px',
-                      scrollbarWidth: 'thin',
-                      scrollbarColor: 'rgba(0,0,0,0.5) rgba(0,0,0,0.15)',
+                      paddingBottom: '8px',
+                      scrollbarWidth: 'thick',
+                      scrollbarColor: '#000000 transparent',
                       alignItems: 'center',
                       height: `${THUMB_MAX_H}px`,
                       position: 'relative',
                     }}
+                    className="media-scroll-thick"
                   >
                     {activeMediaStrip === project.id && (
                       <div style={{
