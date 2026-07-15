@@ -288,6 +288,23 @@
   .media-row-scroll::-webkit-scrollbar-thumb:hover {
     background: rgba(0,0,0,0.7);
   }
+
+  .media-scroll-thick::-webkit-scrollbar {
+    height: 12px;
+  }
+
+  .media-scroll-thick::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .media-scroll-thick::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 0px;
+  }
+
+  .media-scroll-thick::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+  }
 }
 
 /* Fade-in animation for video loading */
