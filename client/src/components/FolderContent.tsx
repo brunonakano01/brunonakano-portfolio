@@ -2668,6 +2668,72 @@ const PROJECT_TO_SECTION: Record<string, string> = {
 
 
 export function IndexContent({ onProjectClick }: { onProjectClick?: (sectionId: string, projectId?: string) => void }) {
+  const mainContainerRef = useRef<HTMLDivElement>(null);
+  const mediaStripRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const [activeMediaStrip, setActiveMediaStrip] = useState<string | null>(null);
+
+  const handleMainContainerMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!mainContainerRef.current) return;
+    const rect = mainContainerRef.current.getBoundingClientRect();
+    const rightEdgeThreshold = 80;
+    const distFromRight = rect.right - e.clientX;
+    
+    if (distFromRight < rightEdgeThreshold && distFromRight > 0) {
+      if (!scrollIntervalRef.current) {
+        scrollIntervalRef.current = setInterval(() => {
+          if (mainContainerRef.current) {
+            mainContainerRef.current.scrollTop += 3;
+          }
+        }, 16);
+      }
+    } else {
+      if (scrollIntervalRef.current) {
+        clearInterval(scrollIntervalRef.current);
+        scrollIntervalRef.current = null;
+      }
+    }
+  };
+
+  const handleMainContainerMouseLeave = () => {
+    if (scrollIntervalRef.current) {
+      clearInterval(scrollIntervalRef.current);
+      scrollIntervalRef.current = null;
+    }
+  };
+
+  const handleMediaStripMouseMove = (projectId: string, e: React.MouseEvent<HTMLDivElement>) => {
+    const container = mediaStripRefs.current[projectId];
+    if (!container) return;
+    
+    const rect = container.getBoundingClientRect();
+    const rightEdgeThreshold = 60;
+    const distFromRight = rect.right - e.clientX;
+    
+    if (distFromRight < rightEdgeThreshold && distFromRight > 0) {
+      setActiveMediaStrip(projectId);
+    } else if (distFromRight > 100) {
+      setActiveMediaStrip(null);
+    }
+  };
+
+  const handleMediaStripMouseLeave = () => {
+    setActiveMediaStrip(null);
+  };
+
+  useEffect(() => {
+    if (!activeMediaStrip) return;
+    
+    const container = mediaStripRefs.current[activeMediaStrip];
+    if (!container) return;
+    
+    const interval = setInterval(() => {
+      container.scrollLeft += 4;
+    }, 16);
+    
+    return () => clearInterval(interval);
+  }, [activeMediaStrip]);
+
   // Helper: extract a displayable thumbnail URL from a media item
   function getMediaThumb(item: { type: string; url: string; [key: string]: any }): { src: string; isVideo: boolean; aspectRatio?: string } {
     if (item.type === 'pair') return { src: item.url, isVideo: false };
@@ -3347,7 +3413,13 @@ export function IndexContent({ onProjectClick }: { onProjectClick?: (sectionId: 
   };
 
   return (
-    <div className="p-6 overflow-y-auto h-full" style={{ background: 'var(--folder-bg, #000000)', color: 'var(--folder-text, #ffffff)' }}>
+    <div
+      ref={mainContainerRef}
+      className="p-6 overflow-y-auto h-full relative"
+      style={{ background: 'var(--folder-bg, #000000)', color: 'var(--folder-text, #ffffff)' }}
+      onMouseMove={handleMainContainerMouseMove}
+      onMouseLeave={handleMainContainerMouseLeave}
+    >
       {renderLightbox()}
       {allSections.map((section) => (
         <div key={section.label} className="mb-10">
@@ -3472,16 +3544,36 @@ export function IndexContent({ onProjectClick }: { onProjectClick?: (sectionId: 
                   )}
 
                   {/* Horizontal scrolling media strip */}
-                  <div style={{
-                    display: 'flex',
-                    gap: '6px',
-                    overflowX: 'auto',
-                    paddingBottom: '4px',
-                    scrollbarWidth: 'thin',
-                    scrollbarColor: 'rgba(0,0,0,0.5) rgba(0,0,0,0.15)',
-                    alignItems: 'center',
-                    height: `${THUMB_MAX_H}px`,
-                  }}>
+                  <div
+                    ref={(el) => {
+                      if (el) mediaStripRefs.current[project.id] = el;
+                    }}
+                    onMouseMove={(e) => handleMediaStripMouseMove(project.id, e)}
+                    onMouseLeave={handleMediaStripMouseLeave}
+                    style={{
+                      display: 'flex',
+                      gap: '6px',
+                      overflowX: 'auto',
+                      paddingBottom: '4px',
+                      scrollbarWidth: 'thin',
+                      scrollbarColor: 'rgba(0,0,0,0.5) rgba(0,0,0,0.15)',
+                      alignItems: 'center',
+                      height: `${THUMB_MAX_H}px`,
+                      position: 'relative',
+                    }}
+                  >
+                    {activeMediaStrip === project.id && (
+                      <div style={{
+                        position: 'absolute',
+                        right: 0,
+                        top: 0,
+                        bottom: 0,
+                        width: '60px',
+                        background: 'linear-gradient(to left, rgba(255,255,255,0.15), transparent)',
+                        pointerEvents: 'none',
+                        zIndex: 2,
+                      }} />
+                    )}
                     {project.media.map((item, idx) => {
                       const { src, isVideo, aspectRatio } = getMediaThumb(item);
                       const isImage = item.type === 'image';
