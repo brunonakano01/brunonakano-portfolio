@@ -290,15 +290,16 @@
   }
 
   .media-scroll-thick::-webkit-scrollbar {
-    height: 12px;
+    height: 16px;
   }
 
   .media-scroll-thick::-webkit-scrollbar-track {
-    background: transparent;
+    background: #c084fc;
+    border-radius: 0px;
   }
 
   .media-scroll-thick::-webkit-scrollbar-thumb {
-    background: #000000;
+    background: #1f1f1f;
     border-radius: 0px;
   }
 
