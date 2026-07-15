@@ -1,0 +1,20 @@
+[build]
+  command = "pnpm install && pnpm run build"
+  publish = "dist/public"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production]
+  command = "pnpm install && pnpm run build"
+  publish = "dist/public"
+
+[context.deploy-preview]
+  command = "pnpm install && pnpm run build"
+  publish = "dist/public"
+
+[context.branch-deploy]
+  command = "pnpm install && pnpm run build"
+  publish = "dist/public"

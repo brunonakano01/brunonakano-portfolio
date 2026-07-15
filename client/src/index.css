@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+/* Brutalist Digital Minimalism: Pure white and dark gray, sharp edges, mechanical precision */
+:root {
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --radius: 0px;
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --secondary: #000000;
+  --secondary-foreground: #ffffff;
+  --muted: #ffffff;
+  --muted-foreground: #000000;
+  --accent: #000000;
+  --accent-foreground: #ffffff;
+  --destructive: #000000;
+  --destructive-foreground: #ffffff;
+  --border: #000000;
+  --input: #000000;
+  --ring: #000000;
+}
+
+@layer base {
+  * {
+    outline: none !important;
+    cursor: none !important;
+  }
+
+  *:focus {
+    outline: none !important;
+  }
+
+  button:focus, a:focus, [role="button"]:focus {
+    outline: none !important;
+  }
+
+  body {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 17.5px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: transparent;
+    min-height: 100vh;
+    color: #000000;
+  }
+
+  /* MoMA-style typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    text-transform: none;
+  }
+
+  p, span, div, button {
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  em, i {
+    font-style: italic;
+  }
+
+  /* Remove all transitions for instant feedback except for specific components */
+  *:not(.hover\:translate-y-\[-4px\]):not(.hover\:border-\[4px\]) {
+    transition: none !important;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Brutalist window styling */
+   .window {
+    border: none;
+    background: #000000;
+    position: absolute;
+  }
+  .window-title-bar {
+    border-bottom: none;
+    background: var(--folder-bg, #000000);
+    color: var(--folder-text, #ffffff);
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    cursor: none;
+    user-select: none;
+    position: relative;
+  }
+
+  .window-controls {
+    display: flex;
+    gap: 4px;
+  }
+
+  .window-control-btn {
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: none;
+  }
+  .window-control-btn:hover,
+  .window-control-btn:focus {
+    background: #333333;
+    color: #ffffff;
+     outline: none;
+  }
+  .desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    cursor: none;
+    user-select: none;
+    padding: 8px;
+  }
+
+  .desktop-icon:hover .icon-bg svg,
+  .desktop-icon:focus .icon-bg svg {
+    fill: #000000;
+    stroke: #ffffff;
+  }
+
+  .desktop-icon:hover .icon-label,
+  .desktop-icon:focus .icon-label {
+    background: #000000 !important;
+    color: #ffffff !important;
+  }
+
+  .desktop-icon:focus {
+    outline: none;
+  }
+
+  .icon-bg {
+    width: 64px;
+    height: 64px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-label {
+    font-size: 12.5px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    padding: 0;
+    background: transparent;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* Brutalist scrollbar */
+  .scrollbar-brutalist {
+    scroll-behavior: smooth;
+  }
+
+  .scrollbar-brutalist::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .scrollbar-brutalist::-webkit-scrollbar-track {
+    background: #ffffff;
+    border: 1px solid #2C2C2C;
+  }
+
+  .scrollbar-brutalist::-webkit-scrollbar-thumb {
+    background: #2C2C2C;
+    border: none;
+  }
+
+  .scrollbar-brutalist::-webkit-scrollbar-thumb:hover {
+    background: #2C2C2C;
+  }
+
+  /* Styled vertical scrollbar for windows */
+  .window-scrollbar {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #2C2C2C #ffffff;
+  }
+
+  .window-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .window-scrollbar::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-left: 1px dotted #2C2C2C;
+  }
+
+  .window-scrollbar::-webkit-scrollbar-thumb {
+    background: #2C2C2C;
+    border: 1px solid #ffffff;
+  }
+
+  .window-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #333;
+  }
+
+  /* Visible horizontal scrollbar for media rows */
+  .media-row-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .media-row-scroll::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.12);
+    border-radius: 4px;
+  }
+
+  .media-row-scroll::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.45);
+    border-radius: 4px;
+  }
+
+  .media-row-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.7);
+  }
+}
+
+/* Fade-in animation for video loading */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-in;
+}
+
+/* Animated gradient text for SWITCH NAV button */
+.gradient-text {
+  background: linear-gradient(90deg, #ff0080, #ff8c00, #ffe600, #00ff88, #00cfff, #7b2fff, #ff0080);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-flow 3s linear infinite;
+  cursor: none;
+}
+
+.gradient-text:hover {
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  background: #000000;
+  animation: none;
+}
+
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* INDEX window project title hover: removed black bar */
+
+/* Fade in animation for scattered boxes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
