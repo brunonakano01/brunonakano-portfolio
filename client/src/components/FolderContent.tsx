@@ -713,7 +713,7 @@ export function SocialContent({ activeTags = [], onTagClick, initialExpandedProj
       id: 'social-01',
       title: '(01) @Zuck | CEO Communications',
       tagline: "Reimagining Mark's social presence",
-      description: 'In 2023, Mark Zuckerberg set out to move away from an overly corporate social presence and show up in a more human, culturally relevant way. I was part of the small team brought in to help shape that shift.\n\nOur approach is to turn product launches, company updates, and complex technology into stories that people genuinely want to watch, share, and talk about. Rather than relying on traditional marketing, we make Mark feel more like a creator and the products feel useful, relatable, and part of everyday life through social content, live events, and creator collaborations.',
+          description: 'In 2023, Mark Zuckerberg set out to move away from an overly corporate social presence and show up in a more human, culturally relevant way. I was part of the small team brought in to help shape that shift.\n\nWorking on the CEO Communications team at Meta, we help bring Mark\'s voice to social through product launches, company updates, creator collaborations, and live events. Rather than traditional executive communications, the focus is on creating stories that feel native to social, making complex technology more relatable, approachable, and worth watching, sharing, and talking about.',
       tags: ['Social', 'PR'],
       hoverImg: '/assets/download(8)_c34ba657_c19a7e.jpeg',
       media: [
@@ -2788,7 +2788,7 @@ export function IndexContent({ onProjectClick }: { onProjectClick?: (sectionId: 
           id: 'social-01',
           title: '@ZUCK | CEO COMMUNICATIONS',
           tagline: "Reimagining Mark's social presence",
-          description: 'In 2023, Mark Zuckerberg set out to move away from an overly corporate social presence and show up in a more human, culturally relevant way. I was part of the small team brought in to help shape that shift.\n\nOur approach is to turn product launches, company updates, and complex technology into stories that people genuinely want to watch, share, and talk about. Rather than relying on traditional marketing, we make Mark feel more like a creator and the products feel useful, relatable, and part of everyday life through social content, live events, and creator collaborations.',
+          description: 'In 2023, Mark Zuckerberg set out to move away from an overly corporate social presence and show up in a more human, culturally relevant way. I was part of the small team brought in to help shape that shift.\n\nWorking on the CEO Communications team at Meta, we help bring Mark\'s voice to social through product launches, company updates, creator collaborations, and live events. Rather than traditional executive communications, the focus is on creating stories that feel native to social, making complex technology more relatable, approachable, and worth watching, sharing, and talking about.',
           agency: '',
           hoverImg: '/assets/download(8)_c34ba657_c19a7e.jpeg',
           media: [
