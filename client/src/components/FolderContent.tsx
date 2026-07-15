@@ -2263,7 +2263,7 @@ export function AboutContent() {
           <div style={{ marginBottom: 24, marginTop: 0 }}>
             <h3 style={sectionHead('Current')}>Current</h3>
             <p style={{ fontSize: 14.5, lineHeight: 1.65, color: 'var(--folder-muted, #000000)' }}>
-              At Meta, I lead a small social creative team dedicated to supporting Mark Zuckerberg, helping shape how new technologies show up in the world through social content and product storytelling. I also lead the creative direction for Connect, Meta's flagship conference, bringing together a team of 20+ creatives to deliver the company's biggest moment each year.
+              At Meta, I lead a small creative team dedicated to supporting Mark Zuckerberg, helping shape how one of the world's most visible executives shows up online. I also lead the creative direction for Connect, Meta's flagship conference, bringing together a team of 20+ creatives to deliver the company's biggest moment of the year.
             </p>
           </div>
 
