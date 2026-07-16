@@ -2254,7 +2254,7 @@ export function AboutContent() {
             {greeting} 👋<br />I'm Bruno Nakano, a Brazilian-Japanese Creative Director working across social, brand design, product, and storytelling.
           </p>
           <p style={{ fontSize: 14.5, lineHeight: 1.65, marginBottom: 8, color: 'var(--folder-muted, #000000)' }}>
-            I've spent time at agencies, design studios, and in-house teams around the world, helping launch products, build brands, shape executive communications, and create work people genuinely want to engage with. From global campaigns and keynote stages to product experiences and internet culture, the work has always been about finding the right idea for the right moment, and having fun doing it.
+            I value craft, intention, and the slow process of making things with care. At the same time, I enjoy working at the speed of social, technology, and culture, where ideas evolve quickly and relevance is constantly changing. Moving between these two worlds has shaped how I think and create, combining thoughtful execution with curiosity, adaptability, and a desire to keep learning.
           </p>
           <div style={{ marginBottom: 24 }} />
 
