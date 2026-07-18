@@ -2253,9 +2253,6 @@ export function AboutContent() {
           <p style={{ fontSize: 14.5, lineHeight: 1.65, marginBottom: 8, color: 'var(--folder-text, #ffffff)', fontWeight: '700' }}>
             {greeting} 👋<br />I'm Bruno Nakano, a Brazilian-Japanese Creative Director working across social, brand design, product, and storytelling.
           </p>
-          <p style={{ fontSize: 14.5, lineHeight: 1.65, marginBottom: 8, color: 'var(--folder-muted, #000000)' }}>
-            I value craft, intention, and the slow process of making things with care. At the same time, I enjoy working at the speed of social, technology, and culture, where ideas evolve quickly and relevance is constantly changing. Moving between these two worlds has shaped how I think and create, combining thoughtful execution with curiosity, adaptability, and a desire to keep learning.
-          </p>
           <div style={{ marginBottom: 24 }} />
 
 
