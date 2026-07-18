@@ -45,7 +45,7 @@ export default function MobileView() {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
         <p style={{ ...base, fontWeight: 600 }}>(Bruno Nakano)</p>
         <p style={{ ...base, fontWeight: 600 }}>
-          I'm a social-first creative director. Ironically, my portfolio is desktop-only.
+          This site is desktop only. Come back on a computer.
         </p>
       </div>
 
