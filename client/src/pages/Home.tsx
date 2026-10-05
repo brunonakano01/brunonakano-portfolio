@@ -153,7 +153,7 @@ export default function Home() {
         <>
           <div className="fixed top-6 left-6 z-[60] text-[14.5px] leading-relaxed" style={{fontFamily:"'Inter','Helvetica Neue',Helvetica,Arial,sans-serif",letterSpacing:'-0.01em',filter:modeAHeaderBlur,transition:'filter 0.25s ease'}}>
             <div className="font-medium">Creative Director @ Meta</div>
-            <div><a href="mailto:hello@brunonakano.com" className="hover:underline font-medium">hello@brunonakano.com</a></div>
+            <div><a href="mailto:hello@brunonakano.work" className="hover:underline font-medium">hello@brunonakano.work</a></div>
           </div>
           <WaveName text="(Bruno Nakano)" isBlurred={modeAHasOpenWindows} blurStyle={modeAHeaderBlur} />
           <div className="fixed top-6 right-6 z-[60] text-[14.5px] leading-relaxed text-right" style={{fontFamily:"'Inter','Helvetica Neue',Helvetica,Arial,sans-serif",letterSpacing:'-0.01em',filter:modeAHeaderBlur,transition:'filter 0.25s ease'}}>

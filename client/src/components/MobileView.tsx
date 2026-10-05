@@ -53,7 +53,7 @@ export default function MobileView() {
 
       {/* Contact links */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-        <a href="mailto:hello@brunonakano.com" style={link}>hello@brunonakano.com</a>
+        <a href="mailto:hello@brunonakano.work" style={link}>hello@brunonakano.work</a>
         <a href="https://www.linkedin.com/in/brunonakano" target="_blank" rel="noopener noreferrer" style={link}>LinkedIn ↗</a>
       </div>
     </div>
