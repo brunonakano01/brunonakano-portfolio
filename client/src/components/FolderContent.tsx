@@ -2270,7 +2270,7 @@ I also lead the creative direction for Connect, Meta's flagship conference, brin
           <div style={{ marginBottom: 24 }}>
             <h3 style={sectionHead('Experience')}>Past</h3>
             <p style={{ fontSize: 14.5, lineHeight: 1.75, color: 'var(--folder-muted, #000000)' }}>
-              Over the years, I've been fortunate to work with local and global brands across multiple countries, disciplines, and mediums, at places like{' '}
+              I enjoy making things and finding creative ways to solve problems. Over the years, I have been fortunate to work as a Creative Director, Head of Art, and in other senior roles, working with local and global brands across countries, disciplines, and mediums, at places like{' '}
               Meta<sup style={{ fontSize: 9.5, fontWeight: 400, color: 'var(--folder-muted, #000000)', verticalAlign: 'super', marginLeft: 2 }}>Menlo Park</sup>,{' '}
               FCB West<sup style={{ fontSize: 9.5, fontWeight: 400, color: 'var(--folder-muted, #000000)', verticalAlign: 'super', marginLeft: 2 }}>San Francisco</sup>,{' '}
               R/GA<sup style={{ fontSize: 9.5, fontWeight: 400, color: 'var(--folder-muted, #000000)', verticalAlign: 'super', marginLeft: 2 }}>New York</sup>,{' '}
