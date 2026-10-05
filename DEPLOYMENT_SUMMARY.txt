@@ -227,7 +227,7 @@ CONTACT & PORTFOLIO INFO
 
 Name: Bruno Nakano
 Title: Creative Director @ Meta
-Email: hello@brunonakano.com
+Email: hello@brunonakano.work
 Location: Los Angeles, CA
 Timezone: Pacific Time (PT)
 

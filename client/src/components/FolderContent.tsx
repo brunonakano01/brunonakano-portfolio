@@ -2307,7 +2307,7 @@ I also lead the creative direction for Connect, Meta's flagship conference, brin
           <div style={{ marginBottom: 24, width: '100%' }}>
             <h3 style={{ ...sectionHead('Contact'), borderBottom: '1px solid rgba(0,0,0,0.18)' }}>Contact</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'flex-end' }}>
-              <a href="mailto:hello@brunonakano.com" style={{ fontSize: 14.5, color: 'var(--folder-text, #ffffff)', textDecoration: 'underline', fontWeight: 700 }}>hello@brunonakano.com</a>
+              <a href="mailto:hello@brunonakano.work" style={{ fontSize: 14.5, color: 'var(--folder-text, #ffffff)', textDecoration: 'underline', fontWeight: 700 }}>hello@brunonakano.work</a>
               <a href="https://www.linkedin.com/in/brunonakano" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14.5, color: 'var(--folder-text, #ffffff)', textDecoration: 'underline', fontWeight: 700 }}>LinkedIn</a>
 
             </div>
@@ -2365,7 +2365,7 @@ export function WebcamChatContent() {
       const result = await chatMutation.mutateAsync({
         messages: conversationHistoryRef.current,
       });
-      const aiText = typeof result.text === 'string' ? result.text : 'Sorry, I could not respond right now. You can always reach me at hello@brunonakano.com!';
+      const aiText = typeof result.text === 'string' ? result.text : 'Sorry, I could not respond right now. You can always reach me at hello@brunonakano.work!';
       conversationHistoryRef.current.push({ role: 'assistant', content: aiText });
       if (conversationHistoryRef.current.length > 20) {
         conversationHistoryRef.current = conversationHistoryRef.current.slice(-20);
@@ -2375,7 +2375,7 @@ export function WebcamChatContent() {
     } catch (err) {
       console.error('Chat error:', err);
       setIsTyping(false);
-      setMessages(prev => [...prev, { id: Date.now() + 1, text: "Sorry, something went wrong. You can always reach me at hello@brunonakano.com!", sender: 'ai', timestamp: new Date() }]);
+      setMessages(prev => [...prev, { id: Date.now() + 1, text: "Sorry, something went wrong. You can always reach me at hello@brunonakano.work!", sender: 'ai', timestamp: new Date() }]);
     }
   };
 
