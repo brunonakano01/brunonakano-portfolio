@@ -1993,8 +1993,31 @@ export function EventsContent({ activeTags = [], onTagClick, initialExpandedProj
 
   const eventsProjects = [
     {
+      id: 'meta-connect-2026',
+      title: '(01) Meta [Connect 2026]',
+      tagline: "THE RHYTHM OF A MOVIE, THE ENERGY OF A LIVE SHOW",
+      description: "At Meta Connect 2026, we showed what's next for AI and wearables. As Creative Director, I led the keynote's creative team and worked directly with Mark Zuckerberg to shape the story, the stage, and the pace of the show.\n\nWe took our cues from movies and live entertainment, not other tech conferences. We built anticipation before big reveals, gave quieter moments time to land, then brought the energy back up. Live demos were central to the story: rather than stopping to explain the technology, we let the audience see what it could do.\n\nWe brought that same approach to the stage. Working with Es Devlin, we built a living room beneath a giant curved screen and designed the set to change scenes in front of the audience.\n\nAfter the show, Mark called it \"the cleanest Connect we've ever done.\"",
+      agency: '',
+      production: '',
+      tags: ['Events', 'Activation', 'Meta'],
+      hoverImg: '/assets/mc2026-meta-logo.jpg',
+      media: [
+        { type: 'vimeo', url: 'https://player.vimeo.com/video/1250175904?badge=0&autopause=0&player_id=0&app_id=58479', videoWidth: 'min(640px, 70vw)', aspectRatio: '16/9' },
+        { type: 'vimeo', url: 'https://player.vimeo.com/video/1250177324?badge=0&autopause=0&player_id=0&app_id=58479', videoWidth: 'min(640px, 70vw)', aspectRatio: '640/301' },
+        { type: 'image', url: '/assets/mc2026-still-01.jpg', maxWidth: '500px' },
+        { type: 'vimeo', url: 'https://player.vimeo.com/video/1250177326?badge=0&autopause=0&player_id=0&app_id=58479', videoWidth: 'min(640px, 70vw)', aspectRatio: '16/9' },
+        { type: 'image', url: '/assets/mc2026-still-02.jpg', maxWidth: '500px' },
+        { type: 'image', url: '/assets/mc2026-still-03.jpg', maxWidth: '500px' },
+        { type: 'vimeo', url: 'https://player.vimeo.com/video/1250175783?badge=0&autopause=0&player_id=0&app_id=58479', videoWidth: 'min(640px, 70vw)', aspectRatio: '16/9' },
+        { type: 'image', url: '/assets/mc2026-still-04.jpg', maxWidth: '500px' },
+        { type: 'image', url: '/assets/mc2026-still-05.jpg', maxWidth: '500px' },
+        { type: 'vimeo', url: 'https://player.vimeo.com/video/1250175782?badge=0&autopause=0&player_id=0&app_id=58479', videoWidth: 'min(640px, 70vw)', aspectRatio: '16/9' },
+        { type: 'image', url: '/assets/mc2026-still-06.jpg', maxWidth: '500px' },
+      ] as { type: string; url: string; [key: string]: any }[]
+    },
+    {
       id: 'meta-connect-2025',
-      title: '(01) Meta [Connect 2025]',
+      title: '(02) Meta [Connect 2025]',
       tagline: "BUILT FOR THE FEED",
       description: "Connect 2025 was built as a social-first broadcast. Mark opened in a walk-and-talk wearing the Ray-Ban Display; the show closed with Diplo running live on campus in the Oakley Meta Vanguard. Every creative choice was engineered for shareability: 190M social reach (4x prior year), 62M keynote views, 61M IG creator reach.",
       agency: '',
@@ -2012,7 +2035,7 @@ export function EventsContent({ activeTags = [], onTagClick, initialExpandedProj
     },
     {
       id: 'meta-connect-2024',
-      title: '(02) Meta [Connect 2024]',
+      title: '(03) Meta [Connect 2024]',
       tagline: "THE KEYNOTE BECOMES THE DEMO",
       description: "Connect 2024 broke the tech keynote format by bringing external guests on stage for the first time: Awkwafina voicing a live AI demo, creator Don Allen Stevenson showcasing his AI Studio build, and UFC champion Brandon Moreno having a real-time translated conversation with Mark. Each guest proved a product capability live. The keynote became the content, reaching 41M views.",
       agency: '',
@@ -2029,7 +2052,7 @@ export function EventsContent({ activeTags = [], onTagClick, initialExpandedProj
     },
     {
       id: 'mr-lee',
-      title: '(03) Playstation [Mr. Lee Tailor Shop]',
+      title: '(04) Playstation [Mr. Lee Tailor Shop]',
       tagline: 'TAILOR SHOP TO SUPERHEROES AND VILLAINS',
       description: "In the new Playstation game, DC Universe Online, you can create your own superhero or villain by choosing powers, abilities and your custom suit.\n\nMr. Lee's Tailor Shop specializes in handcrafting custom suits for heroes and villains. So you can make your suit a reality and can live the same experience as the game in the offline world.\n\nThe live experience began deciding whether to be a hero or villain, fill out a questionnaire, and get measurements taken. The custom suit was first created within the game and then an illustrator drew a sketch and gave it to the client together with an estimate.",
       agency: 'Agency: Leo Burnett Iberia',
@@ -2663,6 +2686,7 @@ const PROJECT_TO_SECTION: Record<string, string> = {
   'mr-lee': 'events',
   'meta-connect-2024': 'events',
   'meta-connect-2025': 'events',
+  'meta-connect-2026': 'events',
 };
 
 
@@ -3086,6 +3110,27 @@ export function IndexContent({ onProjectClick }: { onProjectClick?: (sectionId: 
       label: 'EVENTS AND ACTIVATIONS',
       sectionId: 'events',
       projects: [
+        {
+          id: 'meta-connect-2026',
+          title: 'META [CONNECT 2026]',
+          tagline: "THE RHYTHM OF A MOVIE, THE ENERGY OF A LIVE SHOW",
+          description: "At Meta Connect 2026, we showed what's next for AI and wearables. As Creative Director, I led the keynote's creative team and worked directly with Mark Zuckerberg to shape the story, the stage, and the pace of the show.\n\nWe took our cues from movies and live entertainment, not other tech conferences. We built anticipation before big reveals, gave quieter moments time to land, then brought the energy back up. Live demos were central to the story: rather than stopping to explain the technology, we let the audience see what it could do.\n\nWe brought that same approach to the stage. Working with Es Devlin, we built a living room beneath a giant curved screen and designed the set to change scenes in front of the audience.\n\nAfter the show, Mark called it \"the cleanest Connect we've ever done.\"",
+          agency: '',
+          hoverImg: '/assets/mc2026-meta-logo.jpg',
+          media: [
+            { type: 'vimeo', url: 'https://player.vimeo.com/video/1250175904?badge=0&autopause=0&player_id=0&app_id=58479' },
+            { type: 'vimeo', url: 'https://player.vimeo.com/video/1250177324?badge=0&autopause=0&player_id=0&app_id=58479', aspectRatio: '640/301' },
+            { type: 'image', url: '/assets/mc2026-still-01.jpg' },
+            { type: 'vimeo', url: 'https://player.vimeo.com/video/1250177326?badge=0&autopause=0&player_id=0&app_id=58479' },
+            { type: 'image', url: '/assets/mc2026-still-02.jpg' },
+            { type: 'image', url: '/assets/mc2026-still-03.jpg' },
+            { type: 'vimeo', url: 'https://player.vimeo.com/video/1250175783?badge=0&autopause=0&player_id=0&app_id=58479' },
+            { type: 'image', url: '/assets/mc2026-still-04.jpg' },
+            { type: 'image', url: '/assets/mc2026-still-05.jpg' },
+            { type: 'vimeo', url: 'https://player.vimeo.com/video/1250175782?badge=0&autopause=0&player_id=0&app_id=58479' },
+            { type: 'image', url: '/assets/mc2026-still-06.jpg' },
+          ]
+        },
         {
           id: 'meta-connect-2025',
           title: 'META [CONNECT 2025]',
